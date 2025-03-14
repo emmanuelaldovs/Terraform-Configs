@@ -18,10 +18,10 @@ resource "azurerm_virtual_network" "my_terraform_network_t" {
 */
 
 module "VirtualNetwork" {
-    source = "./modules/VirtualNetwork"
-    name = "myVnet"
-    address_space = ["10.0.0.0/16"]
-	location = var.resource_group_location
+  source = "./modules/VirtualNetwork"
+  name = "myVnet"
+  address_space = ["10.0.0.0/16"]
+	location = var.resource_group_location  
 	resource_group_name = azurerm_resource_group.rg_t.name
 }
 
